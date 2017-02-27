@@ -6,67 +6,164 @@
 }
 
 
-.month {
+.header {
     padding: 20px;
     width: 100%;
     height: 200px;
     background: #1abc9c;
     background-size: cover; 
     font-size: 25px;
-}
-
-#month {
-    margin-left: 30px; 
-}
-
-.cl-date {
-   position: relative;
-   width: 100%;
-   height: 150px;
-}
-
-.cl-day {
-    width: 13.5%;  
-    height: 100%;
-    border-left: 1px solid lightgrey;
-    vertical-align: top;
     display: inline-block;
-    padding: 5px;
-
-
-
+    position: relative;
 }
 
-.cl-num {
-   font-size: 52px;
+#menu {
+    width: 40px;
+    height: 40px;
+    margin-bottom: -10px;
+ 
+}
+#month {
+    margin-left: 35px; 
+ 
+}
+#dd-menu-month{
+    font-size: 12px;
+    /*margin-left: 5px;*/
+     width: 40px;
+     height: 40px;
+
+}
+#month-view{
+
+     width: 25px;
+     height: 25px;
+     position: absolute;
+     right: 75px; 
+}
+#settings-menu {
+    position: absolute;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    position: absolute;
+}
+
+@media all and (max-width: 500px) {
+  .container {
+     flex-flow: column wrap;
+     padding: 0;
+  }
+  .cl-hour {
+      display: none;
+  }
+  .cl-cell {
+      display: none;
+  }
+ 
 }
 
 .cl-hour {
+    min-width: 50px;
 
-    width: 5%;  
-    display: inline-block;
 }
-
-.cl-row {
-    width: 100%;
+.cl-hour div {
     height: 50px;
+    text-align: right;
+    font-size: 10px;
+    color: grey;
+    padding-right: 3px;
 }
 
-.cl-hour-cell {
+.cl-day {
+    flex:1;
+    min-width: 50px;
 
-    width: 5%;  
-    display: inline-block;
-    font-size: 10px;
-    text-align: center;
-    margin-top:45px;
+    border-left: 1px solid lightgrey;
+    position: relative;
+}
+
+.cl-date {
+    height: 160px;
+    border-bottom: 1px solid lightgrey;
+    padding: 5px;
+    font-size: 12px;
+}
+.cl-date span {
+   font-size: 42px;
+}
+.num {
+    font-size: 1.5em;
 }
 
 .cl-cell {
-    width: 13.5%;  
-    min-width:70px;
-    height: 100%;
-    border-left: 1px solid lightgrey;
-    vertical-align: top;
-    display: inline-block;
-    border-top: 1px solid lightgrey;
+    height: 50px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.cl-event {
+    /*position: absolute;*/
+    width: 100%-10px;
+    margin: 2px 6px 2px 6px;
+    font-size: 14px;
+    font-weight: bold;
+    /*border: 3px solid white;*/
+    /*outline: 3px solid red;*/
+    border-radius: 5px;
+    background-color: indianred;
+    color: white;
+    padding: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+    transition-duration: 0.4s;
+}
+.cl-event span{
+    font-weight: normal;
+}
+
+.cl-event:hover{
+
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transform: translate( -3px, -3px);
+
+}
+
+
+
+.button-add {
+   width: 53px;
+   height: 53px;
+   display: block;
+   position: fixed;
+  background-color: red;
+  color: white;
+  /*box-shadow: 2px 2px 6px rgba(0,0,0,0.3);*/
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 50%;
+  /*text-align: center;*/
+  font-size: 26px;
+  box-sizing: border-box;
+  bottom: 30px;
+  right: 30px;
+  /*padding-top: 9px; */
+
+  
+}
+
+.button-add div {
+     transition-duration: 1s;
+     margin:9px;
+     text-align: center;
+     padding-bottom: 4px; 
+       /*display: block;*/
+}
+
+.button-add div:hover {
+   transform: rotate(180deg);
 }
