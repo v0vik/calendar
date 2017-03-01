@@ -40,12 +40,14 @@
      height: 25px;
      position: absolute;
      right: 75px; 
+     margin-top: 7px;
 }
 #settings-menu {
     position: absolute;
     right: 20px;
     width: 25px;
     height: 25px;
+    margin-top: 7px;
 }
 
 .container {
@@ -54,7 +56,7 @@
     position: absolute;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
   .container {
      flex-flow: column wrap;
      padding: 0;
@@ -64,8 +66,15 @@
   }
   .cl-cell {
       display: none;
+     
   }
- 
+  .cl-day {
+          display: flex;
+    flex-direction: column;
+  }
+ .cl-event {
+          margin-left: 60px;
+ }
 }
 
 .cl-hour {
